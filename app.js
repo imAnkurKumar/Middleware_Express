@@ -3,6 +3,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 
 const app = express();
+const error = require("./controllers/error");
 const adminRouters = require("./routes/admin");
 const contactUsRoutes = require("./routes/contactUs");
 const shopRoutes = require("./routes/shop");
@@ -15,9 +16,7 @@ app.use(contactUsRoutes);
 
 app.use(shopRoutes);
 
-app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
-});
+app.use(error.error);
 
 app.listen(3000);
 

@@ -1,0 +1,11 @@
+.contactUs-form {
+  width: 30rem;
+  max-width: 90%;
+  margin: auto;
+}
+
+.contact-form label,
+.contact-form input {
+  display: block;
+  width: 100%;
+}
