@@ -5,6 +5,6 @@ const getProducts = require("../controllers/admin");
 
 router.get("/add-product", getProducts.getProducts);
 
-router.post("/add-product", getProducts.getProductsPost);
+router.post("/add-product", getProducts.ProductsPost);
 
 module.exports = router;
